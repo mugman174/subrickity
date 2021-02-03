@@ -8,6 +8,7 @@ import 'welcomepage.dart';
 import 'tryorinstallpage.dart';
 import 'turnoffrstpage.dart';
 import 'keyboardlayoutpage.dart';
+import 'rickroll.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -44,6 +45,7 @@ class UbuntuDesktopInstallerApp extends StatelessWidget {
         '/turnoffrst': (BuildContext context) => TurnOffRSTPage(),
         '/keyboardlayout': (BuildContext context) =>
             KeyboardLayoutPage(client: client),
+        '/rickroll': (BuildContext context) => rickRoll(),
       },
     );
   }

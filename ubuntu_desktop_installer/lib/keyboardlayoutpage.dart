@@ -21,8 +21,8 @@ class KeyboardLayoutPage extends StatefulWidget {
 
   String get title => Intl.message('Keyboard layout');
   String get header => Intl.message('Choose your keyboard layout:');
-  String get hint => Intl.message('Type here to test your keyboard');
-  String get detect => Intl.message('Detect Keyboard Layout');
+  String get hint => Intl.message('Type here for fun');
+  String get detect => Intl.message('Let mugman#5453 Detect Your Keyboard Layout');
 }
 
 class _KeyboardLayoutPageState extends State<KeyboardLayoutPage> {
@@ -161,7 +161,7 @@ class _KeyboardLayoutPageState extends State<KeyboardLayoutPage> {
                     child: OutlinedButton(
                       child: Text(widget.detect),
                       onPressed: () {
-                        print('TODO: show dialog to detect keyboard layout');
+                        print('TODO: show dialog to detect keyboard layout - need a git pull for dat');
                       },
                     ),
                   ),

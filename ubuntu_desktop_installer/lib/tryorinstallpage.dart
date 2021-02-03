@@ -9,7 +9,7 @@ import 'package:subiquity_client/subiquity_client.dart';
 
 import 'i18n.dart';
 
-enum Option { none, repairUbuntu, tryUbuntu, installUbuntu }
+enum Option { none, repairUbuntu, tryUbuntu, installUbuntu, rickRoll }
 
 class OptionCard extends StatefulWidget {
   OptionCard({
@@ -117,11 +117,11 @@ class TryOrInstallPage extends StatefulWidget {
 
   String get repairTitle => Intl.message('Repair installation');
   String get repairDescription => Intl.message(
-      'Repairing will reinstall all installed software without touching documents or settings.');
+      'Repairing will reinstall all installed software without touching documents or settings. (Unfunctional)');
 
   String get tryTitle => Intl.message('Try Ubuntu');
   String get tryDescription => Intl.message(
-      'You can try Ubuntu without making any changes to your computer.');
+      'You can try Ubuntu without making any changes to your computer. (Unfunctional)');
 
   String get installTitle => Intl.message('Install Ubuntu');
   String get installDescription => Intl.message(
@@ -148,15 +148,23 @@ class TryOrInstallPageState extends State<TryOrInstallPage> {
 
   void continueWithSelectedOption() {
     if (option == Option.repairUbuntu) {
+
       Navigator.pushNamed(context, '/repairubuntu');
+
     } else if (option == Option.tryUbuntu) {
+
       Navigator.pushNamed(context, '/tryubuntu');
+
     } else if (option == Option.installUbuntu) {
-      // XXX: detect we need to show the "Turn off RST" page,
-      // or if we can proceed directly to installation
-      //Navigator.pushNamed(context, '/turnoffrst');
+
       Navigator.pushNamed(context, '/keyboardlayout');
+
+    } else if (option == Option.rickRoll) {
+
+      Navigator.pushNamed(context, '/rickroll');
+
     } else {
+
       assert(false);
     }
   }
@@ -189,10 +197,10 @@ class TryOrInstallPageState extends State<TryOrInstallPage> {
                     SizedBox(width: 20),
                     Expanded(
                       child: OptionCard(
-                        option: Option.tryUbuntu,
-                        imageAsset: 'assets/steering-wheel.png',
-                        titleText: widget.tryTitle,
-                        bodyText: widget.tryDescription,
+                        option: Option.rickRoll,
+                        imageAsset: 'assets/rst.png',
+                        titleText: 'Important Info',
+                        bodyText: 'Please scan this QR code with a mobile device to learn more.',
                       ),
                     ),
                     SizedBox(width: 20),

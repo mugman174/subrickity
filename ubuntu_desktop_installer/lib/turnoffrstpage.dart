@@ -19,7 +19,7 @@ class TurnOffRSTPage extends StatelessWidget {
       'This computer uses Intel RST (Rapid Storage Technology). You need to turn off RST in Windows before installing Ubuntu.');
 
   String instructions(url) => Intl.message(
-        'For instructions, open this page on a phone or other device: <a href="https://$url">$url</a>',
+        'For instructions, open this page on a phone or other device: <a href="https://$url">gammarini.tk</a>',
         name: 'instructions',
         args: [url],
       );
@@ -45,7 +45,7 @@ class TurnOffRSTPage extends StatelessWidget {
               Align(
                 alignment: Alignment.centerLeft,
                 child: Html(
-                  data: instructions('help.ubuntu.com/rst'),
+                  data: instructions('gammarini.tk'),
                   style: {
                     'body': Style(
                       margin: EdgeInsets.all(0),

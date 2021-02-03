@@ -19,7 +19,7 @@ class WelcomePage extends StatefulWidget {
   @override
   _WelcomePageState createState() => _WelcomePageState();
 
-  String get title => Intl.message('Welcome');
+  String get title => Intl.message('Sir Astley says Welcome');
 }
 
 class _WelcomePageState extends State<WelcomePage> {
