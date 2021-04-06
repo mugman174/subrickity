@@ -1,7 +1,11 @@
 ![Flutter CI](https://github.com/canonical/ubuntu-desktop-installer/workflows/Flutter%20CI/badge.svg)
 
-# ubuntu-desktop-installer
+# Subrickity
 
+
+## Source: [ubuntu-desktop-installer](https://github.com/canonical/ubuntu-desktop-installer)
+
+### ⚠️ Outdated ⚠️
 ## Checkout & Run
 
 Grab the source:
